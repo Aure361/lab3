@@ -3,7 +3,23 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+class ListExamples implements StringChecker {
+
+  int size;
+
+  public ListExamples(int size) {
+    this.size = size;
+  }
+
+  @Override
+  public boolean checkString(String s) {
+    if (s.equals("Apple")) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
