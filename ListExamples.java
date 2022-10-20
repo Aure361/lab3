@@ -5,20 +5,12 @@ interface StringChecker { boolean checkString(String s); }
 
 class ListExamples implements StringChecker {
 
-  int size;
-
-  public ListExamples(int size) {
-    this.size = size;
-  }
-
   @Override
-  public boolean checkString(String s) {
-    if (s.equals("Apple")) {
+  public boolean checkString(String s) {//refer to pa2 to see how you did it.
+    if (s.contains("a")) {
       return true;
     }
-    else {
-      return false;
-    }
+    return false;
   }
 
   // Returns a new list that has all the elements of the input list for which

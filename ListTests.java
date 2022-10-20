@@ -8,12 +8,11 @@ public class ListTests {
     @Test
     public void testFilter() {
         List<String> input1 = new ArrayList<>();
-        input1.add("Aurelio");
-        input1.add("Apple");
+        input1.add("aurelio");
+        input1.add("zero");
         List<String> input1Compare = new ArrayList<>();
-        input1Compare.add("Apple");
-        ListExamples test = new ListExamples(1);
+        input1Compare.add("apple");
 
-        assertEquals(input1Compare, ListExamples.filter(input1, test));
+        assertEquals(input1Compare, ListExamples.filter(input1, new ListExamples()));
     }
 }
